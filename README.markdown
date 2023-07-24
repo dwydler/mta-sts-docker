@@ -2,7 +2,7 @@
 
 This tool verifies whether a give host correctly implements the new in-development <a href="https://github.com/mrisher/smtp-sts">MTA-STS standard</a> for downgrade-resistant secure email. It is very new and not very well tested so don't rely on it's result too much.
 
-Online version: https://mta-sts-validator.wydler.eu/
+Online version: http://mta-sts-tester.daniel.wydler.eu/
 
 License: BSD 2-clause license (see LICENSE.txt).
 
@@ -53,7 +53,7 @@ License: BSD 2-clause license (see LICENSE.txt).
 
  5. Restart service:
  
-        $ systemctl stop uwsgi.service
+        $ systemctl restart uwsgi.service
 
  6. Install the application:
 	
