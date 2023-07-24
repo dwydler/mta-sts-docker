@@ -718,8 +718,8 @@ app = flask.Flask(__name__)
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
 limiter = Limiter(
-    app,
-    key_func=get_remote_address,
+    get_remote_address,
+    app=app,
 )
 
 # Catch-all: http://flask.pocoo.org/snippets/57/
