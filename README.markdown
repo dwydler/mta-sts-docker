@@ -10,7 +10,7 @@ License: BSD 2-clause license (see LICENSE.txt).
 
  1. Install dependencies:
 
-        $ apt install uwsgi uwsgi-plugin-python3 python3-flask python3-flask-limiter python3-dnspython
+        $ apt install uwsgi uwsgi-plugin-python3 python3-flask python3-dnspython
 
  2. Create a configuration file for uWSGI at `/etc/uwsgi/apps-available/emperor.ini`:
 
@@ -53,7 +53,7 @@ License: BSD 2-clause license (see LICENSE.txt).
 
  5. Restart service:
  
-        $ service uwsgi restart		
+        $ systemctl stop uwsgi.service
 
  6. Install the application:
 	
@@ -94,7 +94,7 @@ License: BSD 2-clause license (see LICENSE.txt).
 
  3. Restart service:
  
-        $ systemctl restart apache2
+        $ systemctl restart apache2.service
 
 
 ## Installing nginx on Ubuntu 22.04 LTS
@@ -119,7 +119,7 @@ License: BSD 2-clause license (see LICENSE.txt).
     ```
  3. Restart service:
  
-        $ systemctl restart nginx
+        $ systemctl restart nginx.service
 		
 
 ## Remark
