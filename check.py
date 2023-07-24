@@ -20,7 +20,7 @@ from cryptography.hazmat.primitives import serialization # Debian: python3-crypt
 from cryptography.x509 import load_der_x509_certificate
 from cryptography.hazmat.backends import default_backend
 
-NAMESERVERS = ['8.8.8.8']
+NAMESERVERS = ['2620:fe::fe', '2620:fe::9', '9.9.9.9', '149.112.112.112']
 SMTP_LOCAL_HOSTNAME = None
 
 # See e.g. this page how to deploy:
