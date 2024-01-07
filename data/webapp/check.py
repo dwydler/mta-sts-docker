@@ -413,7 +413,7 @@ def checkPolicyFile(result, domain):
         return result.error('connect')
 
     try:
-        conn.request('GET', path)
+        conn.request('GET', path, headers={"User-Agent": "MTA-STS Agent/1.0"})
         res = conn.getresponse()
         if res.status == 404:
             return result.error('policy-not-found')
