@@ -16,12 +16,12 @@ services:
       - "./data/webapp:/var/www/html/mta-sts:ro"
       - "./conf/nginx/default.conf:/etc/nginx/conf.d/default.conf:rw"
     links:
-      - ubuntu
+      - app
     networks:
       frontend:
 
 
-  ubuntu:
+  app:
     build: docker/ubuntu
     container_name: "mta-sts_application"
     restart: "unless-stopped"
