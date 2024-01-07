@@ -559,7 +559,7 @@ def checkMailserver(result, mx, preference, policyNames):
 
     if not domainPattern.match(mx.lower()):
         data.error = '!invalid-mx'
-    elif len(result.value['servers']) > 5:
+    elif len(result.value['servers']) > 10:
         data.error = '!skip'
     if data.error:
         result.error('mx-fail')
