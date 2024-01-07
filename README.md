@@ -6,6 +6,13 @@ Online version: http://mta-sts-tester.daniel.wydler.eu/
 
 License: BSD 2-clause license (see LICENSE.txt).
 
+
+## Requirements
+
+* Docker & Docker Compose V2
+* SSH/Terminal access (able to install commands/functions if non-existent)
+
+
 ## Installing application on Ubuntu 22.04 LTS
 
  1. Install dependencies:
