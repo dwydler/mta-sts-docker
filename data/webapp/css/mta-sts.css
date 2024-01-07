@@ -87,3 +87,10 @@ dt.off:after {
 		transform:rotate(360deg);
 	}
 }
+
+/* Overwrite Bootstrap CSS default size */
+.btn-primary {
+	--bs-btn-padding-x: 1.10rem;
+	--bs-btn-padding-y: 0.5rem;
+	--bs-btn-font-size: 1.25rem;
+}

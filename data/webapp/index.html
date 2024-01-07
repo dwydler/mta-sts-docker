@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 	<head>
 		<title>MTA-STS validator</title>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-		<link rel="stylesheet" href="css/mta-sts.css?v=3"/>
-		<link rel="shortcut icon" href="images/favicon.ico"/>
+		<link rel="stylesheet" href="css/bootstap-5.3.2.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/mta-sts.css?v=3">
+		
+		<link rel="shortcut icon" href="images/favicon.ico">
 
-		<script src="js/mta-sts.js?v=3" defer></script>
+		<script src="js/mta-sts.js?v=3" defer integrity="sha384-W0TKR0HhA9k/xWtX1PdPwLREi19tEOM0lEZUsuuDqtPospYEz5d2qktzz75BCjdD" crossorigin="anonymous"></script>
 		
 	</head>
 	<body>
@@ -20,7 +21,7 @@
 			<!-- pattern: https://stackoverflow.com/a/106223/559350 -->
 			<p>
 				<form class="domain input-group input-group-lg">
-					<input placeholder="gmail.com" type="text" autocapitalize="none" autocorrect="off" inputmode="verbatim" class="form-control" required pattern="(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])">
+					<input placeholder="gmail.com" type="text" autocapitalize="none" autocomplete="off" class="form-control" required pattern="(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])">
 					<span class="input-group-append">
 						<button class="btn btn-primary">Check!</button>
 					</span>
@@ -72,31 +73,31 @@ mx: backupmx.example.com</pre>
 				<h2>Details</h2>
 				<div class="report-mta-sts">
 					<h3 class="loading">
-						<div>MTA-STS TXT record</div>
+						MTA-STS TXT record
 					</h3>
 					<div class="contents"></div>
 				</div>
 				<div class="report-tlsrpt">
 					<h3 class="loading">
-						<div>SMTP-TLSRPT TXT record</div>
+						SMTP-TLSRPT TXT record
 					</h3>
 					<div class="contents"></div>
 				</div>
 				<div class="report-policy">
 					<h3 class="loading">
-						<div>Policy file</div>
+						Policy file
 					</h3>
 					<div class="contents"></div>
 				</div>
 				<div class="report-mx">
 					<h3 class="loading">
-						<div>Certificate check</div>
+						Certificate check
 					</h3>
 					<div class="contents"></div>
 				</div>
 				<div class="report-dane">
 					<h3 class="loading">
-						<div>DANE <sup style="font-weight: normal">[experimental]</sup></div>
+						DANE <sup style="font-weight: normal">[experimental]</sup>
 					</h3>
 					<dl class="parts"></dl>
 				</div>
