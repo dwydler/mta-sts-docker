@@ -9,7 +9,7 @@ RUN apt update
 
 # Install package(s)
 RUN apt install -y uwsgi uwsgi-plugin-python3 python3-flask python3-dnspython
-#RUN apt install -y net-tools
+#RUN apt install -y net-tools iputils-ping
 
 RUN apt install -y python3-pip
 RUN pip3 install setuptools wheel
