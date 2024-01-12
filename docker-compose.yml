@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   web:
-    image: wydler/mta-sts-webserver
+    image: "wydler/mta-sts-webserver:dev"
     container_name: "mta-sts_webserver"
     restart: "unless-stopped"
     ports:
@@ -22,7 +22,7 @@ services:
 
 
   app:
-    build: wydler/mta-sts-application
+    image: "wydler/mta-sts-uwsgi:dev"
     container_name: "mta-sts_application"
     restart: "unless-stopped"
     user: "33:33"
