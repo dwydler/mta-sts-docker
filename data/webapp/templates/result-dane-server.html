@@ -12,7 +12,7 @@
 <div>Could not validate TLSA record with DNSSEC.</div>
 {% endif %}
 {% if mx.tlsa_state == "unusable" %}
-<div>There is at least one TLSA record that does not follow <a href="https://tools.ietf.org/html/rfc7672#section-3.1">RFC7672</a>. RFC7672 specifies that TLSA records <code>3 1 1</code> or <code>2 0 1</code> SHOULD be used, but others (like <code>2 1 1</code> may also be supported).</div>
+<div>There is at least one TLSA record that does not follow <a target="_blank" href="https://tools.ietf.org/html/rfc7672#section-3.1">RFC7672</a>. RFC7672 specifies that TLSA records <code>3 1 1</code> or <code>2 0 1</code> SHOULD be used, but others (like <code>2 1 1</code> may also be supported).</div>
 {% elif mx.tlsa_state == "unsupported" %}
 <div>There is at least one TLSA record in the form of <code>2 x 1</code>. These records are not yet supported by this validator so this check cannot succeed.</div>
 {% elif mx.tlsa_state == "fail" %}

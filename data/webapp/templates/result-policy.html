@@ -1,6 +1,6 @@
 {% if report.policy.value %}
 <p>
-Policy: <a href="{{ report.policy.value.url }}">{{ report.policy.value.url }}</a>
+Policy: <a target="_blank" href="{{ report.policy.value.url }}">{{ report.policy.value.url }}</a>
 {% if report.policy.value.data %}
 <pre class="ml-4">{{ report.policy.value.data }}</pre>
 {% endif %}

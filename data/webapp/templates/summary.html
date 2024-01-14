@@ -22,7 +22,7 @@
 	<strong>Warning</strong>: make sure the SMTP-TLSRPT DNS record is set up correctly.
 	{% elif report.ratingTLSRPT <= 4 %}
 	Everything is set up correctly! You should receive reports on
-	{% for addr in report.tlsrpt.value.addresses %}<a href="{{ addr }}">{% if addr.startswith('mailto:') %}{{ addr[7:] }}{% else %}{{ addr }}{% endif %}</a>{% if loop.revindex == 2 %} and {% elif loop.last %}{% else %}, {% endif %}{% endfor %},
+	{% for addr in report.tlsrpt.value.addresses %}<a target="_blank" href="{{ addr }}">{% if addr.startswith('mailto:') %}{{ addr[7:] }}{% else %}{{ addr }}{% endif %}</a>{% if loop.revindex == 2 %} and {% elif loop.last %}{% else %}, {% endif %}{% endfor %},
 	as soon as mail senders start sending them.
 	{% elif report.ratingTLSRPT <= 5 %}
 	<strong>Note</strong>: SMTP-TLSRPT has been disabled, but is otherwise set up correctly. Set mode to <code>testing</code> or <code>enforce</code> to enable it.
@@ -31,7 +31,7 @@
 </dl>
 
 {% if report.rating >= 3 %}
-<p class="alert alert-info" role="alert"><strong>Note</strong>: even though the server appears to be set up correctly for MTA-STS, I recommend using a test like <a href="https://www.ssllabs.com/ssltest/analyze.html?d={{ report.domain }}&latest">Qualys SSL Labs</a> to analyze the HTTP host and to <a href="https://en.internet.nl/mail/{{ report.domain }}/">test the mail host</a>.</p>
+<p class="alert alert-info" role="alert"><strong>Note</strong>: even though the server appears to be set up correctly for MTA-STS, I recommend using a test like <a href="https://www.ssllabs.com/ssltest/analyze.html?d={{ report.domain }}&latest" target="_blank">Qualys SSL Labs</a> to analyze the HTTP host and to <a target="_blank" href="https://en.internet.nl/mail/{{ report.domain }}/">test the mail host</a>.</p>
 {% elif report.errorName %}{# global error #}
 <p class="alert alert-danger" role="alert">
 	<strong>Error</strong>:

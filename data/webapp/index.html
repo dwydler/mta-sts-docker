@@ -35,12 +35,12 @@
 			</div>
 
 			<h2>Background</h2>
-			<p><a href="https://tools.ietf.org/html/rfc8461">MTA-STS (RFC8461)</a> is a new standard that makes it possible to send downgrade-resistant email over SMTP. In that sense, it is like an alternative to DANE. It does this by piggybacking on the browser Certificate Authority model. This validator checks whether a domain adheres to the RFC. An alternative validator is <a href="https://www.hardenize.com/">Hardenize</a>, which checks for much more than just MTA-STS</p>
+			<p><a target="_blank" href="https://tools.ietf.org/html/rfc8461">MTA-STS (RFC8461)</a> is a new standard that makes it possible to send downgrade-resistant email over SMTP. In that sense, it is like an alternative to DANE. It does this by piggybacking on the browser Certificate Authority model. This validator checks whether a domain adheres to the RFC. An alternative validator is <a target="_blank" href="https://www.hardenize.com/">Hardenize</a>, which checks for much more than just MTA-STS</p>
 
 			<p class="mb-0">To enable Strict Transport Security on your mailserver configure the following things:</p>
 
 			<ul>
-				<li>Check that your host has <a href="https://en.internet.nl/test-mail/">properly configured STARTTLS</a></li>
+				<li>Check that your host has <a target="_blank" href="https://en.internet.nl/test-mail/">properly configured STARTTLS</a></li>
 				<li>Add a TLSRPT DNS TXT record at <code>_smtp._tls</code> on your domain, e.g. <code>_smtp._tls.example.com</code>, with something like <code>v=TLSRPTv1; rua=mailto:mta-sts@example.com</code>.</li>
 				<li>Add a MTA-STS DNS TXT record at <code>_mta-sts</code> on your domain, e.g. <code>_mta-sts.example.com</code>, with something like <code>v=STSv1; id=20160831085700Z</code>.</li>
 				<li>Add a subdomain <code>mta-sts</code> to your domain (note the lack of an underscore) and serve a policy file on <code>https://mta-sts.example.com/.well-known/mta-sts.txt</code>. Here is an example policy file:
@@ -52,10 +52,10 @@ mx: mail.example.com
 mx: *.example.net
 mx: backupmx.example.com</pre>
 				</li>
-				<li>Test this mail domain using this or <a href="https://www.hardenize.com/">another validator</a>.</li>
+				<li>Test this mail domain using this or <a target="_blank" href="https://www.hardenize.com/">another validator</a>.</li>
 			</ul>
 
-			<p>Created by: <a href="https://aykevl.nl/" rel="author">Ayke</a> (<a href="https://github.com/aykevl/mta-sts">source code</a>). If you encounter any errors, you can create a <a href="https://github.com/aykevl/mta-sts/issues/new">bug report</a> or alternatively <a href="https://aykevl.nl/about">send me a personal message</a>.
+			<p>Created by: <a target="_blank" href="https://aykevl.nl/" rel="author">Ayke</a> (<a target="_blank" href="https://github.com/aykevl/mta-sts">source code</a>). If you encounter any errors, you can create a <a target="_blank" href="https://github.com/aykevl/mta-sts/issues/new">bug report</a> or alternatively <a target="_blank" href="https://aykevl.nl/about">send me a personal message</a>.
 		</div>
 
 		<div id="templates">
