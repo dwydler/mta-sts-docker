@@ -2,7 +2,7 @@
 
 This tool verifies whether a give host correctly implements the new in-development <a href="https://github.com/mrisher/smtp-sts">MTA-STS standard</a> for downgrade-resistant secure email. It is very new and not very well tested so don't rely on it's result too much.
 
-Online version: http://mta-sts-tester.daniel.wydler.eu/
+Online version: https://mta-sts-tester.n01.cl01.daniel.wydler.eu/
 
 License: BSD 2-clause license (see LICENSE.txt).
 
