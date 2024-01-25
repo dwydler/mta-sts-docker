@@ -20,14 +20,14 @@ docker buildx use mta-sts
 
 
 #
-cd /opt/containers/mta-sts-docker/docker/nginx/
+cd /opt/containers/mta-sts/docker/nginx/
 docker buildx build \
        	--platform linux/arm64,linux/amd64 \
        	-t wydler/mta-sts-web:$CONTAINERTAG \
        	. \
 	--push
 
-cd /opt/containers/mta-sts-docker/docker/ubuntu/
+cd /opt/containers/mta-sts/docker/ubuntu/
 docker buildx build \
        	--platform linux/arm64,linux/amd64 \
        	-t wydler/mta-sts-uwsgi:$CONTAINERTAG \
