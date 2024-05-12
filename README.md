@@ -13,9 +13,18 @@ License: BSD 2-clause license (see LICENSE.txt).
 * SSH/Terminal access (able to install commands/functions if non-existent)
 
 
-## Install / Update
-1. Clone the repository to the correct folder for docker containers
-2. For IPv6 support, edit the Docker daemon configuration file, located at /etc/docker/daemon.json. Configure the following parameters and run `systemctl restart docker.service` to restart docker:
+## Install
+1. Clone the repository to the correct folder for docker container:
+  ```
+   git clone https://github.com/dwydler/mta-sts-docker.git /opt/containers/mta-sts
+   git -C /opt/containers/mta-sts checkout $(git -C /opt/containers/mta-sts tag | tail -1)
+  ```
+3. Download dependencies:
+  ```
+   git submodule init
+   git submodule update --recursive
+  ```
+5. For IPv6 support, edit the Docker daemon configuration file, located at /etc/docker/daemon.json. Configure the following parameters and run `systemctl restart docker.service` to restart docker:
   ```
   {
     "experimental": true,
@@ -23,6 +32,5 @@ License: BSD 2-clause license (see LICENSE.txt).
   }
   ```
 3. Navigate to into the application folder (e.g. /opt/containers/mta-sts/)
-4. Starting application with `docker compose -f docker-compose.yml up -d`
-5. Don't forget to test, that the applcation works sucessully (e.g. http(s)://IP-Addresse or FQDN/).		
-
+4. Starting application with `docker compose -f /opt/containers/mta-sts/docker-compose.yml up -d`
+5. Don't forget to test, that the applcation works sucessully (e.g. http(s)://IP-Addresse or FQDN/).
