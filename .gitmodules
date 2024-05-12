@@ -1,3 +1,4 @@
 [submodule "data/webapp"]
 	path = data/webapp
 	url = https://github.com/dwydler/mta-sts.git
+	branch = Customize
