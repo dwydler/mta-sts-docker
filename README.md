@@ -21,8 +21,7 @@ License: BSD 2-clause license (see LICENSE.txt).
   ```
 3. Download dependencies:
   ```
-   git submodule init
-   git submodule update --recursive
+   git -C /opt/containers/mta-sts submodule update --init --recursive
   ```
 5. For IPv6 support, edit the Docker daemon configuration file, located at /etc/docker/daemon.json. Configure the following parameters and run `systemctl restart docker.service` to restart docker:
   ```
