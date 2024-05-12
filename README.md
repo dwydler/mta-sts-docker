@@ -14,7 +14,11 @@ License: BSD 2-clause license (see LICENSE.txt).
 
 
 ## Install
-1. Clone the repository to the correct folder for docker container:
+1. Install docker and containerd using the script
+  ```
+    curl https://raw.githubusercontent.com/dwydler/mta-sts-docker/master/docker/misc/02-docker.io-installation.sh | bash
+  ```
+2. Clone the repository to the correct folder for docker container:
   ```
    git clone https://github.com/dwydler/mta-sts-docker.git /opt/containers/mta-sts
    git -C /opt/containers/mta-sts checkout $(git -C /opt/containers/mta-sts tag | tail -1)
@@ -23,13 +27,12 @@ License: BSD 2-clause license (see LICENSE.txt).
   ```
    git -C /opt/containers/mta-sts submodule update --init --recursive
   ```
-5. For IPv6 support, edit the Docker daemon configuration file, located at /etc/docker/daemon.json. Configure the following parameters and run `systemctl restart docker.service` to restart docker:
+4. For IPv6 support, edit the Docker daemon configuration file, located at /etc/docker/daemon.json. Configure the following parameters and run `systemctl restart docker.service` to restart docker:
   ```
   {
     "experimental": true,
     "ip6tables": true
   }
   ```
-3. Navigate to into the application folder (e.g. /opt/containers/mta-sts/)
-4. Starting application with `docker compose -f /opt/containers/mta-sts/docker-compose.yml up -d`
-5. Don't forget to test, that the applcation works sucessully (e.g. http(s)://IP-Addresse or FQDN/).
+5. Starting application with `docker compose -f /opt/containers/mta-sts/docker-compose.yml up -d`
+6. Don't forget to test, that the applcation works sucessully (e.g. http(s)://IP-Addresse or FQDN/).
