@@ -1,5 +1,5 @@
 # Reference image
-FROM ubuntu:jammy-20250619
+FROM ubuntu:jammy-20250714
 
 # Metadata
 LABEL org.opencontainers.image.authors="Daniel Wydler"
