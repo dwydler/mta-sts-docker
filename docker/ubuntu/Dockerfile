@@ -25,8 +25,8 @@ RUN pip3 --no-cache-dir install \
     Flask-Limiter
 
 #
-RUN mkdir -p /etc/uwsgi/vassals
-RUN chmod 755 /etc/uwsgi/vassals
+RUN mkdir -p /etc/uwsgi/vassals \
+    && chmod 755 /etc/uwsgi/vassals
 
 #
 RUN mkdir -p /etc/uwsgi/apps-enabled
