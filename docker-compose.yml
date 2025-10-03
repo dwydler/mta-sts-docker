@@ -1,3 +1,4 @@
+---
 version: "3.9"
 
 services:
@@ -44,4 +45,3 @@ networks:
     ipam:
       config:
         - subnet: fd00:face:cafe:feed::/64
-
