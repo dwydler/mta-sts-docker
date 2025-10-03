@@ -18,7 +18,7 @@ RUN apt-get update && \
     && rm -r /var/lib/apt/lists/*
 
 #
-RUN pip3 install \
+RUN pip3 --no-cache-dir install \
     setuptools \
     wheel \
     uwsgitop \
