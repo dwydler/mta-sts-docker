@@ -15,5 +15,3 @@ RUN rm -r /var/lib/apt/lists/*
 
 #
 CMD ["nginx", "-g", "daemon off;"]
-
-
