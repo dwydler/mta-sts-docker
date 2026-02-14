@@ -49,10 +49,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - image: mta-sts-web
+          - image: web
             dockerfile: nginx
 
-          - image: mta-sts-uwsgi
+          - image: uwsgi
             dockerfile: ubuntu
 
     steps:
